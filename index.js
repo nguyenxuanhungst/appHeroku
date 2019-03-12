@@ -19,7 +19,8 @@ login({email: "0584176294", password: "1621997"}, (err, api) => {
 
     
     api.listen((err, message) => {
-        api.markAsRead(message.threadID);
+        api.sendTypingIndicator(message.threadID);
+        //api.markAsRead(message.threadID);
         //api.sendMessage(message.body, message.threadID);
     });
     
