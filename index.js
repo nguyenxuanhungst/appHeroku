@@ -19,7 +19,13 @@ login({email: "0584176294", password: "1621997"}, (err, api) => {
 
     
     api.listen((err, message) => {
-        api.sendTypingIndicator();
+        api.sendTypingIndicator(message.threadID);
+        setTimeout(
+  () => {
+    api.sendMessage(message.body, message.threadID);
+  },
+  4 * 1000
+);
         //api.markAsRead(message.threadID);
         //api.sendMessage(message.body, message.threadID);
     });
