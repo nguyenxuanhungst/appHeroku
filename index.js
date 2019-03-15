@@ -14,7 +14,7 @@ app.get('/', function(request, response) {
 });
 
 // Create simple echo bot
-login({email: "0584176294", password: "1621997"}, (err, api) => {
+//login({email: "0584176294", password: "1621997"}, (err, api) => {
     if(err) return console.error(err);
 
     
